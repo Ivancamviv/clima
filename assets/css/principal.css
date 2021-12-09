@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
+    background-image: url('https://mapachetours.com/blog/wp-content/uploads/2018/08/weather-cr.jpg');
+    background-repeat: no-repeat;
+}
+
+.app{
+    width: 72%;
+    background-color:hsla(0,22%,89%,0.5);
+    border-radius: 20px;
+}
+
+.busqueda{
+    margin: 20px 20% 30px 20%;
+}
+
+#ciudad{
+    width: 82%;
+    height: 30px;
+    border: 2px solid aqua;
+}
+
+#submit{
+    padding: 5px;
+    background-color:aqua;
+    border: none;
+    border-radius: 20px;
+    float: right;
+    margin-top: 4px;
+    font-size: 18px;
+}
+#informacion{
+    margin:35px 0px 45px 40px;
+    display: flex;
+    justify-content: space-around;
+}
+h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+    
+
+}
+
+h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#icon{
+    width: 168px;
+}
