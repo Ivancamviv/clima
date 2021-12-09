@@ -1,19 +1,3 @@
-/*fetch("https://www.metaweather.com/api/location/search/?query=london")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  });
-let divC = document.getElementById("capa1");
-    let list = data.items;
-    for (let index = 0; index < list.length; index++) {
-      let element = list[index].aliases;
-      let divP = document.createElement("p");
-      divP.className = "nombresCapitulos";
-      for (const x of element) {
-        divP.innerHTML = x;
-      }
-      divC.append(divP);}*/
-
 let clima = {
   apiKey: "01734c284dbfd6a977044c653339c098",
   fetchClima: function (city) {
