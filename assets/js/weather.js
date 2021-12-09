@@ -1,5 +1,5 @@
 let clima = {
-  apiKey: "01734c284dbfd6a977044c653339c098",
+  apiKey: "apiValue"// remplazar apiValue con la api key 
   fetchClima: function (city) {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&&units=metric&appid=${this.apiKey}&lang=sp`
