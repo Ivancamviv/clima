@@ -29,31 +29,6 @@ let clima = {
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
 
-    /*let info = document.getElementById("informacion");
-    let nombre = document.createElement("h1");
-    nombre.innerHTML = name;
-    info.append(nombre);
-
-    let descripcion = document.createElement("h3");
-    descripcion.innerHTML = description;
-    info.append(descripcion);
-
-    let divDetallada = document.createElement("div");
-    divDetallada.id = "informacionDetallada";
-    info.append(divDetallada);
-
-    let temperatura = document.createElement("p");
-    temperatura.innerHTML = `Temperatura: ${temp}`;
-    divDetallada.append(temperatura);
-
-    let humedad = document.createElement("p");
-    humedad.innerHTML = `Humedad: ${humidity}`;
-    divDetallada.append(humedad);
-
-    let viento = document.createElement("p");
-    viento.innerHTML = `Velocidad de viento: ${speed}`;
-    divDetallada.append(viento);*/
-
     let nombre = document.getElementById("nombre");
     nombre.innerHTML = name;
 
@@ -71,5 +46,23 @@ let clima = {
 
     let imagen = document.getElementById("icon");
     imagen.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+
+    let fondo = document.querySelector(".container");
+    fondo.style.backgroundImage = ` url('https://source.unsplash.com/1600x1000/?${name}')`;
+  },
+
+  buscar: function () {
+    event.preventDefault();
+    let formulario = event.currentTarget;
+    let ciudadBuscar = formulario.elements.ciudad.value;
+    this.fetchClima(ciudadBuscar);
+    formulario.elements.ciudad.value = "";
   },
 };
+
+function ciudad(e) {
+  clima.buscar();
+}
+
+let formulario = document.getElementById("principal");
+formulario.addEventListener("submit", ciudad);
